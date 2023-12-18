@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIRESTAURANTE.InicioSecion"
+             Title="InicioSecion">
+    <ScrollView>
+        
+        <StackLayout Padding="20" Spacing="20" VerticalOptions="CenterAndExpand">
+               <Image Source="logo.jpg"></Image>
+            <Label Text="Iniciar Sesión" TextColor="#007BFF" FontSize="Title" HorizontalOptions="Center" />
+
+            <Entry x:Name="UsuarioEntry" Placeholder="Usuario" />
+            <Entry x:Name="ContrasenaEntry" Placeholder="Contraseña" IsPassword="True" />
+
+            <Button Text="Iniciar Sesión" BackgroundColor="#007BFF" TextColor="White" Clicked="IniciarSesion_Clicked" />
+
+            <Label Text="¿No tienes una cuenta?" TextColor="#007BFF" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

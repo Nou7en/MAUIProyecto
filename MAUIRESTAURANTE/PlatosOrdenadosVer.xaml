@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MAUIRESTAURANTE.Utils;assembly=MAUIRESTAURANTE"
+             x:Class="MAUIRESTAURANTE.PlatosOrdenadosVer"
+             Title="PlatosOrdenadosVer">
+
+    <ScrollView>
+        <StackLayout Margin="10">
+            <!-- Titulo del menú -->
+            <Label Text="Pedido Ordenado" HorizontalOptions="Center" TextColor="White" FontSize="Large" FontAttributes="Bold" Margin="0,40,0,10"/>
+
+            <ListView x:Name="platosListView" RowHeight="170" ItemsSource="{Binding ListaPedidos}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Margin="0,0,0,10" BackgroundColor="Black">
+                                <!-- Información del plato ordenado -->
+                                <Label Text="CANTIDAD:"></Label>
+                                <Label Text="{Binding Cantidad}" FontSize="Medium" HorizontalOptions="Start" TextColor="White"/>
+                                <Label Text="ID DEL PRODUCTO"></Label>
+                                <Label Text="{Binding IdPlato}" FontSize="Medium" HorizontalOptions="Start" TextColor="White"/>
+                                <Label Text="NOMBRE PLATO"></Label>
+                                <Label Text="{Binding NombrePlato}" FontSize="Medium" HorizontalOptions="Start" TextColor="White"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Cancelar" Clicked="cancelarButton_Clicked" BackgroundColor="#3498DB" TextColor="White" Margin="0,15,0,0"/>
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

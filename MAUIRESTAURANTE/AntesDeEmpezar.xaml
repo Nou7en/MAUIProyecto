@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIRESTAURANTE.AntesDeEmpezar"
+             Title="AntesDeEmpezar">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20" VerticalOptions="CenterAndExpand">
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Image Source="logo.jpg" HeightRequest="160" WidthRequest="160"></Image>
+                <StackLayout>
+                    <Label Text="Sakura Fusion" TextColor="White" FontSize="Large" HorizontalOptions="Center" />
+                </StackLayout>
+            </StackLayout>
+
+            <BoxView HeightRequest="1" Color="#DDD" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+
+            <Button Text="Comenzar a ordenar" BackgroundColor="#007BFF" TextColor="White" Clicked="ComenzarOrdenar_Clicked" />
+            <Button Text="Soy empleado" BackgroundColor="#000" TextColor="White" Clicked="SoyEmpleado_Clicked" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

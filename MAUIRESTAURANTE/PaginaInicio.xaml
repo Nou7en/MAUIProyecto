@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIRESTAURANTE.PaginaInicio"
+             Title="PaginaInicio">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Margin="0,20,0,0">
+
+            <Button Text="¡Comenzar a ordenar!" TextColor="White" BackgroundColor="Transparent" Clicked="OnclickOrden" Margin="0,0,20,0" FontSize="Medium" />
+
+        </StackLayout>
+
+        <ScrollView Grid.Row="1">
+            <StackLayout Padding="20" HorizontalOptions="CenterAndExpand">
+                <Label Text="Sakura Fusion" FontSize="Title" TextColor="#007BFF" HorizontalOptions="CenterAndExpand" Margin="0,20,0,10" />
+                <Label Text="La mejor comida asiática de la ciudad" FontSize="Subtitle" TextColor="White" HorizontalOptions="CenterAndExpand" />
+
+                <StackLayout Margin="0,20,0,0" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Nuestro Chef" FontSize="Large" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                    <Image Source="https://libroderecetas.com/files/recetas/imagepicker/24/Jereme-Leung.jpg" Aspect="AspectFit" HeightRequest="200" WidthRequest="200" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+
+                <StackLayout Margin="0,20,0,0" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Sobre nosotros" FontSize="Large" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                    <Image Source="https://acrosuites.com/wp-content/uploads/2021/12/Acro2-42-Copy.jpg" Aspect="AspectFit" HeightRequest="200" WidthRequest="200" HorizontalOptions="CenterAndExpand"/>
+
+                    <Label
+                            HorizontalTextAlignment="Center"                        
+                           Text="En Sakura Fusion, estamos comprometidos a brindarte una experiencia culinaria inolvidable que te transportará a los sabores auténticos y emocionantes del continente asiático. Nuestro restaurante es un rincón de delicias exóticas y auténticas, donde cada plato cuenta una historia y cada bocado te lleva a un viaje a través de la diversidad culinaria de Asia." 
+                           TextColor="White" 
+                           HorizontalOptions="CenterAndExpand"
+                           Margin="10,0,10,0"
+                           LineBreakMode="WordWrap"/>
+
+                    <Label 
+                        HorizontalTextAlignment="Center" 
+                        Text="Ubicado en el encantador distrito de The Blossom Street, nuestro restaurante ofrece una experiencia culinaria única con auténticos sabores asiáticos en medio de la bulliciosa vida de la ciudad." 
+                           TextColor="White"
+                           HorizontalOptions="CenterAndExpand"
+                           Margin="10,0,10,0"
+                           LineBreakMode="WordWrap"/>
+                    
+                    
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="BorderColor" Value="White"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="TextColor" Value="#007BFF"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+</ContentPage>

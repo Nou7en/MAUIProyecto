@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MAUIRESTAURANTE"
+             x:Class="MAUIRESTAURANTE.OrdenPage"
+             Title="Orden"
+             BackgroundColor="#000">
+
+    <ScrollView>
+        <StackLayout Margin="10">
+            <!-- Titulo del menú -->
+            <Label Text="Menu del Restaurante" HorizontalOptions="Center" TextColor="White" FontSize="Large" FontAttributes="Bold" Margin="0,40,0,10"/>
+
+
+            <ListView x:Name="platosOrdenListView" RowHeight="170" ItemsSource="{Binding PlatosOrden}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Margin="0,0,0,10" BackgroundColor="Black">
+                                <!-- Información del plato -->
+                             
+                                <Label Text="{Binding NombrePlato}" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Start" TextColor="White"/>
+                                <Label Text="{Binding DescripcionPlato}" FontSize="Medium" HorizontalOptions="Start" TextColor="White"/>
+                                <Label Text="{Binding Precio, StringFormat='Precio: {0:C}'}" FontSize="Medium" HorizontalOptions="Start" TextColor="White"/>
+
+                                <!-- Botones de incremento y decremento -->
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                                    <Button Text="Añadir" Clicked="ClickedAñadir" BackgroundColor="Red" TextColor="White" Margin="0,0,5,0"/>
+                                    
+                                    <Button Text="Restar" Clicked="ClickedQuitar" BackgroundColor="Red" TextColor="White" Margin="0,0,5,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!-- Botón de ordenar -->
+            <Button Text="Ordenar" Clicked="OrdenarButton_Clicked" BackgroundColor="#3498DB" TextColor="White" Margin="0,15,0,0"/>
+            <Button Text="Cancelar" Clicked="CancelarButton_Clicked" BackgroundColor="#3498DB" TextColor="White" Margin="0,15,0,0"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

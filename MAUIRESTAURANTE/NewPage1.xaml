@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIRESTAURANTE.NewPage1"
+             Title="NewPage1">
+    <VerticalStackLayout BackgroundColor="Black" Padding="50" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+        <Image Source="logo.jpg"></Image>
+        <!-- Texto "Escoge la mesa..." -->
+        <Label Text="Escoge una mesa, porfavor " TextColor="White" Margin="0,0,0,30" FontSize="Medium" HorizontalOptions="CenterAndExpand"/>
+
+        <!-- Frame (recuadro blanco) con el ComboBox -->
+        <Frame BackgroundColor="Black"  CornerRadius="10" Padding="10" Margin="0,0,0,10" >
+            <Picker x:Name="mesasPicker" Title="Selecciona una mesa" SelectedIndexChanged="MesasPicker_SelectedIndexChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Mesa 1</x:String>
+                        <x:String>Mesa 2</x:String>
+                        <x:String>Mesa 3</x:String>
+                        <x:String>Mesa 4</x:String>
+                        <x:String>Mesa 5</x:String>
+                        <x:String>Mesa 6</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </Frame>
+
+        <!-- Botón de ordenar -->
+        <Button Text="Ordenar" Clicked="Comenzarorden" BackgroundColor="#007BFF" TextColor="White" Margin="0,15,0,0"/>
+    </VerticalStackLayout>
+</ContentPage>

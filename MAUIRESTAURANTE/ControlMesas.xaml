@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIRESTAURANTE.ControlMesas"
+             Title="Control de Mesas"
+             BackgroundColor="#000">
+    <ScrollView>
+        
+        <FlexLayout Direction="Row" JustifyContent="Center" AlignItems="Center" Wrap="Wrap" Margin="0,40,0,0">
+
+            <Button Text="Regresar" Clicked="RegresarButton_Clicked" BackgroundColor="#007BFF" TextColor="White" />
+            
+            <Frame ClassId="1" CornerRadius="10" BackgroundColor="#fff" WidthRequest="300" HeightRequest="200" Margin="20" Padding="20" BorderColor="#007BFF">
+            <StackLayout>
+                <Label Text="Mesa 1" FontSize="24" TextColor="#007BFF" />
+                <Button Text="Visualizar Pedido" BackgroundColor="#000" TextColor="White" Clicked="VisualizarPedido_Clicked1" ClassId="1" Margin="10"/>
+                <Button Text="Terminar Mesa" BackgroundColor="#007BFF" TextColor="White" Clicked="TerminarMesa_Clicked1" ClassId="1" Margin="10"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame ClassId="2" CornerRadius="10" BackgroundColor="#fff" WidthRequest="300" HeightRequest="200" Margin="20" Padding="20" BorderColor="#007BFF">
+            <StackLayout>
+                <Label Text="Mesa 2" FontSize="24" TextColor="#007BFF" />
+                <Button Text="Visualizar Pedido" BackgroundColor="#000" TextColor="White" Clicked="VisualizarPedido_Clicked2" ClassId="2" Margin="10"/>
+                <Button Text="Terminar Mesa" BackgroundColor="#007BFF" TextColor="White" Clicked="TerminarMesa_Clicked2" ClassId="2" Margin="10"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame ClassId="3" CornerRadius="10" BackgroundColor="#fff" WidthRequest="300" HeightRequest="200" Margin="20" Padding="20" BorderColor="#007BFF">
+            <StackLayout>
+                <Label Text="Mesa 3" FontSize="24" TextColor="#007BFF" />
+                <Button Text="Visualizar Pedido" BackgroundColor="#000" TextColor="White" Clicked="VisualizarPedido_Clicked3" ClassId="3" Margin="10"/>
+                <Button Text="Terminar Mesa" BackgroundColor="#007BFF" TextColor="White" Clicked="TerminarMesa_Clicked3" ClassId="3" Margin="10"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame ClassId="4" CornerRadius="10" BackgroundColor="#fff" WidthRequest="300" HeightRequest="200" Margin="20" Padding="20" BorderColor="#007BFF">
+            <StackLayout>
+                <Label Text="Mesa 4" FontSize="24" TextColor="#007BFF" />
+                <Button Text="Visualizar Pedido" BackgroundColor="#000" TextColor="White" Clicked="VisualizarPedido_Clicked4" ClassId="4" Margin="10"/>
+                <Button Text="Terminar Mesa" BackgroundColor="#007BFF" TextColor="White" Clicked="TerminarMesa_Clicked4" ClassId="4" Margin="10"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame ClassId="5" CornerRadius="10" BackgroundColor="#fff" WidthRequest="300" HeightRequest="200" Margin="20" Padding="20" BorderColor="#007BFF">
+            <StackLayout>
+                <Label Text="Mesa 5" FontSize="24" TextColor="#007BFF" />
+                <Button Text="Visualizar Pedido" BackgroundColor="#000" TextColor="White" Clicked="VisualizarPedido_Clicked5" ClassId="5" Margin="10"/>
+                <Button Text="Terminar Mesa" BackgroundColor="#007BFF" TextColor="White" Clicked="TerminarMesa_Clicked5" ClassId="5" Margin="10"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame ClassId="6" CornerRadius="10" BackgroundColor="#fff" WidthRequest="300" HeightRequest="200" Margin="20" Padding="20" BorderColor="#007BFF">
+            <StackLayout>
+                <Label Text="Mesa 6" FontSize="24" TextColor="#007BFF" />
+                <Button Text="Visualizar Pedido" BackgroundColor="#000" TextColor="White" Clicked="VisualizarPedido_Clicked6" ClassId="6" Margin="10"/>
+                <Button Text="Terminar Mesa" BackgroundColor="#007BFF" TextColor="White" Clicked="TerminarMesa_Clicked6" ClassId="6" Margin="10"/>
+            </StackLayout>
+        </Frame>
+    </FlexLayout>
+  </ScrollView>
+</ContentPage>

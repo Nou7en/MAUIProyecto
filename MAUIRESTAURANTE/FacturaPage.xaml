@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MAUIRESTAURANTE.Utils;assembly=MAUIRESTAURANTE"
+             x:Class="MAUIRESTAURANTE.FacturaPage"
+             Title="Factura">
+
+    <ScrollView>
+        <StackLayout Margin="10">
+            <!-- Encabezado del Factura -->
+            <Frame BackgroundColor="White" Padding="10" CornerRadius="10" Margin="0,10,0,10">
+                <Label Text="Factura" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black"/>
+            </Frame>
+
+            <Frame BackgroundColor="White" Padding="10" CornerRadius="10" Margin="0,10,0,10">
+                <StackLayout>
+                  
+
+                    <Label Text="Fecha:" FontSize="Medium" TextColor="#007BFF" FontAttributes="Bold"/>
+                    <Label x:Name="fecha" FontSize="Medium" HorizontalOptions="Start" TextColor="Black"/>
+
+                    <Label Text="Total:" FontSize="Medium" TextColor="#007BFF" FontAttributes="Bold"/>
+                    <Label x:Name="total" FontSize="Medium" HorizontalOptions="Start" TextColor="Black"/>
+
+                    <Label Text="Nombre:" FontSize="Medium" TextColor="#007BFF" FontAttributes="Bold"/>
+                    <Label x:Name="nombre" FontSize="Medium" HorizontalOptions="Start" TextColor="Black"/>
+
+                    <Label Text="RUC/CI:" FontSize="Medium" TextColor="#007BFF" FontAttributes="Bold"/>
+                    <Label x:Name="ci" FontSize="Medium" HorizontalOptions="Start" TextColor="Black"/>
+
+                    <Label Text="Dirección:" FontSize="Medium" TextColor="#007BFF" FontAttributes="Bold"/>
+                    <Label x:Name="direccion" FontSize="Medium" HorizontalOptions="Start" TextColor="Black"/>
+
+
+                </StackLayout>
+            </Frame>
+
+            <StackLayout VerticalOptions="EndAndExpand">
+                <StackLayout VerticalOptions="EndAndExpand">
+                    <Label Text="Productos ordenados" FontSize="Medium" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Label Text="Revisa el detalle de tu factura" FontSize="Medium" TextColor="#007BFF" FontAttributes="Bold" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="EndAndExpand">
+                <StackLayout VerticalOptions="EndAndExpand">
+                    <Label Text="Productos ordenados" FontSize="Medium" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+
+           
+
+            <ListView x:Name="platosListView" RowHeight="170" ItemsSource="{x:Static local:Utils.ListaPlatOrdenados}">
+
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <ViewCell>
+
+                            <StackLayout Orientation="Vertical" Margin="0,0,0,10" BackgroundColor="Black">
+                                
+                                <Label Text="NOMBRE" TextColor="White"/>
+                                <Label Text="{Binding NombrePlato}" FontSize="Medium" HorizontalOptions="Start" TextColor="White"/>
+                      
+                                <Label Text="CANTIDAD ORDENADA" TextColor="White"/>
+                                <Label Text="{Binding Cantidad}" FontSize="Medium" HorizontalOptions="Start" TextColor="White"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="Finalizar" BackgroundColor="#007BFF" TextColor="White" Clicked="Finalizar_Clicked" ClassId="6" Margin="30"/>
+        </StackLayout>
+
+    
+    </ScrollView>
+
+
+</ContentPage>
